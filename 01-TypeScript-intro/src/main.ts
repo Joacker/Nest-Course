@@ -2,7 +2,7 @@ import './style.css'
 import typescriptLogo from './typescript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.ts'
-import { name, age, isValid } from './bases/01-types.ts'
+import { name, age, isValid, templateString } from './bases/01-types.ts'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
@@ -24,5 +24,6 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 console.log('Hola ' + name);
 console.log('Edad: ' + age);
 console.log('Es válido: ' + isValid);
+console.log('Template String: ' + templateString);
 
 setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
