@@ -7,4 +7,12 @@ export class TasksService {
         return ['Task 1', 'Task 2', 'Task 3'];
     }
 
+    createTask(){
+        return 'Task created';
+    }
+
+    updateTask(){
+        return 'Task updated';
+    }
+
 }

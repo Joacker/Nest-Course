@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common'
+import { Controller, Get, Post, Put } from '@nestjs/common'
 import { TasksService } from './tasks.service';
 
 @Controller({})
@@ -16,8 +16,13 @@ export class TaskController {
         return this.tasksService.getTasks();
     }
 
-    // @Get('/')
-    // index() {
-    //     return 'Pagina inicial';
-    // }
+    @Post('/tasks')
+    createTask() {
+        return this.tasksService.createTask();
+    }
+
+    @Put('/tasks')
+    updateTask() {
+        return this.tasksService.updateTask();
+    }
 }
